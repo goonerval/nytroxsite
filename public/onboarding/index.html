@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../assets/js/animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="../assets/js/auto.js"></script>
+    <link rel="stylesheet" href="../assets/styles/assets.css" />
+    <title>Classroom</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://ssl.gstatic.com/classroom/favicon.png"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-5HK1EC9HVE"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-5HK1EC9HVE");
+  </script>
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script
+    async
+    src="https://plausible.io/js/pa-PLi6D2r2ggFV1p2UfqBqN.js"
+  ></script>
+  <script>
+    (window.plausible =
+      window.plausible ||
+      function () {
+        (plausible.q = plausible.q || []).push(arguments);
+      }),
+      (plausible.init =
+        plausible.init ||
+        function (i) {
+          plausible.o = i || {};
+        });
+    plausible.init();
+  </script>
+
+  <body id="body">
+    <div class="welcomeMsgDiv" id="welcomeMsgDiv">
+      <h1 class="welcomeMsg">
+        <span class="galaxy h1one">G</span>
+        <span class="galaxy h1two">A</span>
+        <span class="galaxy h1three">L</span>
+        <span class="galaxy h1four">A</span>
+        <span class="galaxy h1five">X</span>
+        <span class="galaxy h1six">Y</span>
+        <span class="galaxy h1seven WelcomeMsgversion">V</span>
+        <span class="galaxy h1eight WelcomeMsgversion">6</span>
+      </h1>
+      <a class="cta">Click to get started</a>
+    </div>
+    <div class="onboarding">
+      <div class="questionCard enterName stagger1" id="enterName">
+        <a class="question stagger1">What's your name?</a>
+        <input type="text" class="qInput" id="inputName" />
+      </div>
+      <div class="chooseBg stagger2" id="chooseBg">
+        <a class="question stagger2">Choose a Background (More in settings)</a>
+        <div class="sdf stagger2">
+          <div
+            class="bgselect stagger2"
+            onclick="setDefaultBackground('../img/bg3.png')"
+          >
+            <img src="../assets/img/bg3.png" class="bgimg" />
+          </div>
+          <div
+            class="bgselect stagger2"
+            onclick="setDefaultBackground('../img/bg1.webp')"
+          >
+            <img src="../assets/img/bg1.webp" class="bgimg" />
+          </div>
+          <div
+            class="bgselect stagger2"
+            onclick="setDefaultBackground('../img/bg2.jpg')"
+          >
+            <img src="../assets/img/bg2.jpg" class="bgimg" />
+          </div>
+          <div
+            class="bgselect stagger2"
+            onclick="setDefaultBackground('../img/bg4.jpg')"
+          >
+            <img src="../assets/img/bg4.jpg" class="bgimg" />
+          </div>
+          <div
+            class="bgselect stagger2"
+            onclick="setDefaultBackground('../img/bg5.png')"
+          >
+            <img src="../assets/img/bg5.png" class="bgimg" />
+          </div>
+          <div class="bgselect stagger2 uploaddiv" id="uploaddiv">
+            <img src="../assets/img/upload.png" class="bgimg upload" />
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/*"
+              style="display: none"
+            />
+          </div>
+        </div>
+        <button class="continueButton stagger2" onclick="ghost2()">
+          Continue
+        </button>
+      </div>
+      <div class="questionCard finish stagger3" id="finish">
+        <a class="question stagger3">You're All Set!</a>
+        <button class="continueButton" onclick="ghost3()">Next</button>
+      </div>
+    </div>
+  </body>
+</html>
